@@ -348,7 +348,7 @@ h3.subheading.external{
   	line-height:1;
 	text-transform:uppercase;
 	margin:1em auto 1em;
-	color:#84002b;
+	color:#225599;
 	letter-spacing:.1em;
 }
 h3.subheading.external.smaller{
@@ -361,7 +361,7 @@ h3.subheading.internal {
    	line-height:1;
   	text-transform:uppercase;
     margin:2em auto 1em;
-	color:#84002b;
+	color:#225599;
 	letter-spacing:.1em;
 }
 
@@ -450,7 +450,7 @@ p.blurb {
 /* --------------------- Editor's Note --------------------- */
 .editornote {
 	font-family:'Muli', Helvetica, Arial, sans-serif !important;
-   	background:#f8f8f8;
+   	background:#fff7f2;
     font-size:.8em;
     margin:.5em 0 0 -1em;
     line-height:1.4;
@@ -459,7 +459,7 @@ p.blurb {
 .editornote2 {
    	display:none;
 	font-family:'Muli', Helvetica, Arial, sans-serif !important;
-  	background:#f8f8f8;
+  	background:#fff7f2;
     font-size:.8em;
     line-height:1.4;
     padding: .5em 1.5em;
@@ -470,14 +470,14 @@ p.blurb {
     line-height:1.35;
     padding:.5em 0;
     width:90%;
-	color:#84002b;
+	color:#225599;
     border-bottom:1px solid rgba(0,0,0,.3);
 }
 .editornote2 h4.subheading {
     font-family: 'Lora', Georgia, Times, 'Times New Roman', serif !important;
     font-size:1.35em;
     width:80%;
-    color:#84002b;
+    color:#225599;
     margin:.5em auto;
 	line-height:1.35;
 	text-align:center;
@@ -732,7 +732,7 @@ section.inset.right.modalload .centerphoto {
     line-height:1;
     text-transform:uppercase;
     margin:0 auto 1em;
-    color:#84002b;
+    color:#225599;
     letter-spacing:.1em;
 }
 .infobox p a, .infobox li a    {
