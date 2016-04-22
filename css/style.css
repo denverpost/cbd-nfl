@@ -593,6 +593,18 @@ section.inset p, .reverse li {
     line-height: 1.7;
     font-weight:300;
 }
+section.inset ul {
+    margin:1em 0 0 2em;
+}
+section.inset li {
+    font-family:'Muli', Helvetica, Arial, sans-serif !important;
+    font-size:.95em;
+    margin:.15em 0 0;
+    text-indent:0;
+    line-height: 1.7;
+    font-weight:300;
+    list-style-type: circle;
+}
 section.inset p.lead {
     font-size: 1.1em;
     font-weight: 400;
