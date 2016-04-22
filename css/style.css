@@ -464,6 +464,9 @@ p.blurb {
     line-height:1.4;
     padding: .5em 1.5em;
 }
+.editornote2 p {
+   text-align:center;
+}
 .editornote h4.subheading {
     font-family: 'Lora', Georgia, Times, 'Times New Roman', serif !important;
 	font-size:1.35em;
@@ -484,25 +487,6 @@ p.blurb {
     border-bottom:1px solid rgba(0,0,0,.3);
     padding:.5em 0;
     width:90%;
-}
-section.inset p, .reverse li {
-    font-family:'Muli', Helvetica, Arial, sans-serif !important;
-    font-size:1.15em;
-	margin-top:0;
-	text-indent:0;
-	width:80%;
-}
-.editornote2 p {
-   text-align:center;
-}
-section.inset + section.inset {
-    margin-top:12em;
-}
-section.inset div.title h1 {
-    margin:15% auto;
-    border-bottom:1px solid #aaa;
-    padding-bottom:12%;
-    font-size:2.25em;
 }
 
 /* --------------------- Button to Next Article --------------------- */
@@ -591,27 +575,42 @@ section.inset {
 }
 section.inset.right {
     background:#f8f8f8;
-    padding:0 3em 2em;
-    margin:.5em -15% .5em 1.5em;
-    width: 60%;
+    padding:0 3.5em 2em;
+    margin:.5em -30% .5em 1.5em;
+    width: 70%;
     font-size:.9em;
     line-height:1.4;
 }
-
-section.inset .inset-right {
-    float:right;
-    margin-right:-10%;
-    width:55%;
-    margin-left:2em;
-    padding-top:1em;
-    padding-bottom:1em;
+section.inset h3.subheading {
+    font-size:1.6em;
+}
+section.inset p, .reverse li {
+    font-family:'Muli', Helvetica, Arial, sans-serif !important;
+    font-size:1em;
+    margin:1em 0 0;
+    text-indent:0;
+    line-height: 1.6;
+    font-weight:300;
+}
+section.inset p.lead {
+    font-size: 1.075em;
+    font-weight: 400;
+}
+section.inset + section.inset {
+    margin-top:12em;
+}
+section.inset div.title h1 {
+    margin:15% auto;
+    border-bottom:1px solid #aaa;
+    padding-bottom:12%;
+    font-size:2.25em;
 }
 
 section.inset.left {
     background:#f8f8f8;
-    padding:0 3em 2em;
-    margin:.5em 1.5em .5em -15%;
-    width: 60%;
+    padding:0 3.5em 2em;
+    margin:.5em 1.5em .5em -30%;
+    width: 70%;
     font-size:.9em;
     line-height:1.4;
 }
@@ -854,7 +853,7 @@ p.lead .has-tip {
 
 /* --------------------- Links --------------------- */
 a, a *, * a, a:visited, a:visited *, * a:visited, a:active, a:active *, * a:active, a:focus, a:focus *, * a:focus {
-    color:#c47e41;
+    color:#225599;225599
     outline:none;
 }
 p a, p a:visited {
@@ -1209,7 +1208,7 @@ a.startVideo:hover {
 	font-size:50%;
     margin-bottom:12px;
 	line-height:1;
-    color:#c47e41;
+    color:#225599;
    	letter-spacing:1px;
 }
 .closer div#next-inning-teaser img{
