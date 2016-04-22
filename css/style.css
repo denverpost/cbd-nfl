@@ -1482,6 +1482,7 @@ div#footer-bar ul li{
     section.inset.right, section.inset.left {
         width:100%;
         margin:1em 0;
+        padding:0 2em 2em;
     }
     .closer div#next-inning-teaser h2 {
        font-size:2em;
