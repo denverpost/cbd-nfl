@@ -368,7 +368,7 @@ h3.subheading.internal {
 /* --------------------- Text Typography --------------------- */
 p, .reveal-modal li {
   	color:#333;
-    font-size:1.15em;
+    font-size:1.1em;
   	line-height:1.85;
   	text-indent:0;
     margin-bottom:1em;
@@ -433,19 +433,16 @@ p.slideshow-intro{
     font-size:1em;
     margin:0 2.5em 2em;
 }
-
-
-/*
 p.blurb {
-    font-family:'Noticia Text', Georgia, Times, 'Times New Roman', serif;
-    font-size:1.35em;
-    line-height:1.9;
-    color:rgba(0,0,0,0.5);
+    font-family:'Lora', Georgia, Times, 'Times New Roman', serif;
+    font-size:1.25em;
+    line-height:1.8;
+    color:rgba(0,0,0,0.65);
     font-style: italic;
-    text-align: center;
-    margin:1em auto 1.5em;
+    text-align: left;
+    margin:1.25em auto 2em;
     font-weight:400;
-}*/
+}
 
 /* --------------------- Editor's Note --------------------- */
 .editornote {
