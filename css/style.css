@@ -119,6 +119,9 @@ body {
 #part1intro {
     background-image:url('../img/cbd-nfl-2AO2833.jpg');
 }
+#part2intro {
+    background-image:url('../img/jeb-putzier-header-share.jpg');
+}
 /* ----------------------------- Nav Bar ----------------------------- */ 
 nav.top-bar {
     z-index:99;
