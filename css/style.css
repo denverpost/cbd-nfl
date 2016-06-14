@@ -891,13 +891,13 @@ a:hover, * a:hover, a:hover * {
 }
 
 .twinphoto .photoleft2 {
-    width:35%;
+    width:54%;
     float:left;
     padding-right:.75em;
     display:inline-block;
 }
 .twinphoto .photoright2 {
-    width:65%;
+    width:46%;
     float:right;
     padding-left:.75em;
     display:inline-block;
@@ -1546,25 +1546,14 @@ div#footer-bar ul li{
         margin-bottom:0;
     }
     .twinphoto .photoleft,
-    .twinphoto .photoright {
-        width:100%;
-        margin:0 auto 2em;
-        float:none;
-        padding:0;
-    }
-    .twinphoto .photoleft2 {
-        width:70%;
-        margin:0 15% 2em;
-        float:none;
-        padding:0;
-    }
+    .twinphoto .photoright,
+    .twinphoto .photoleft2,
     .twinphoto .photoright2 {
         width:100%;
         margin:0 auto 2em;
         float:none;
         padding:0;
-    }
-   
+    }   
    .closer div#next-inning-teaser h2 {
         font-size:1.25em;
         line-height:1.15;
