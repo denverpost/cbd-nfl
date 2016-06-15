@@ -303,7 +303,7 @@ div.title h1 {
     font-family:'Playfair Display', Georgia, Times, 'Times New Roman', serif !important;
 	font-weight:700;
     text-align: center;
-	font-size:4.5em;
+	font-size:4em;
     line-height:1;
 	margin:.35em auto 0;
     border-top:1px solid #aaa;
@@ -438,7 +438,7 @@ p.slideshow-intro{
 }
 p.blurb {
     font-family:'Lora', Georgia, Times, 'Times New Roman', serif;
-    font-size:1.25em;
+    font-size:1.3em;
     line-height:1.8;
     color:rgba(0,0,0,0.65);
     font-style: italic;
