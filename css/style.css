@@ -575,19 +575,19 @@ section.inset {
 }
 section.inset.right {
     background:#f8f8f8;
-    padding:0 3.5em 3em;
+    padding:0 2.5em 2em;
     margin:.5em -20% .5em 1.5em;
     width: 70%;
-    font-size:.9em;
-    line-height:1.4;
+    font-size:.85em;
+    line-height:1.3;
 }
 section.inset.left {
     background:#f8f8f8;
-    padding:0 3.5em 3em;
+    padding:0 2.5em 2em;
     margin:.5em 1.5em .5em -20%;
     width: 70%;
-    font-size:.9em;
-    line-height:1.4;
+    font-size:.85em;
+    line-height:1.3;
 }
 section.inset h3.subheading {
     margin-top:.75em;
@@ -600,6 +600,7 @@ section.inset p, .reverse li {
     text-indent:0;
     line-height: 1.7;
     font-weight:300;
+    color:#494949;
 }
 section.inset ul {
     margin:1em 0 0 2em;
@@ -612,10 +613,12 @@ section.inset li {
     line-height: 1.7;
     font-weight:300;
     list-style-type: circle;
+    color:#494949;
 }
 section.inset p.lead {
     font-size: 1.1em;
     font-weight: 400;
+    color:#494949;
 }
 section.inset + section.inset {
     margin-top:12em;
@@ -891,13 +894,13 @@ a:hover, * a:hover, a:hover * {
 }
 
 .twinphoto .photoleft2 {
-    width:54%;
+    width:46%;
     float:left;
     padding-right:.75em;
     display:inline-block;
 }
 .twinphoto .photoright2 {
-    width:46%;
+    width:54%;
     float:right;
     padding-left:.75em;
     display:inline-block;
@@ -962,7 +965,7 @@ span.photog {
 /* standard gallery */
 .centergallery {
     width:100%;
-    max-width:1100px;
+    max-width:1200px;
     overflow:hidden;
     display:block;
     position:relative;
@@ -982,14 +985,6 @@ span.photog {
 .centergallery .caption .photog {
     color:#fff;
 	}
-.centergallery {
-    width:100%;
-    max-width:1100px;
-    overflow:hidden;
-    display:block;
-    position:relative;
-    margin:0 auto;
-}
 .centergallery img {
     margin:0;
     width:100%;
@@ -1236,23 +1231,6 @@ a.startVideo:hover {
 .closer div#next-inning-teaser h2 a:hover{
   	color:#ffb368
 }
-/*.centergallery button.slick-next {
-    position:absolute;
-    top:0;
-    right:0;
-	background:rgba(255,255,255,1.0);
-    background-image:url(../img/nextButton.svg);
-	background-repeat:no-repeat;
-	background-position:50% 50%;
-	background-size:20%;
-	height:100%;
-    width:15%;
-    text-align:left;
-    outline:none;
-	z-index:1;
-	background-color:transparent;
-	opacity:0.35;
-}*/
 
 /* --------------------- Footer --------------------- */
 p.small {
@@ -1319,6 +1297,12 @@ div#footer-bar ul li{
 
 /** ---------------------------------------------- 900 ---------------------------------------------- **/
 @media only screen and (max-width: 900px) {
+    .centergallery .columns {
+        padding:0 1em 2em;
+    }
+    .centergallery .caption {
+        font-size:1em;
+    }
     .centergallery button.slick-next {
          background-size:26%;
          background-position: 78% 50%;
@@ -1469,6 +1453,9 @@ div#footer-bar ul li{
     #teaserphoto6{
         background-position:top center;
     }
+    .centergallery .caption {
+        font-size:.95em;
+    }
     .centergallery button.slick-next {
          background-size:30%;
        }
@@ -1503,6 +1490,9 @@ div#footer-bar ul li{
     }
     div#name1, div#name2 {
         width:80%;
+    }
+    .centergallery .caption {
+        font-size:.9em;
     }
 }
 
