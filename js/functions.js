@@ -13,12 +13,10 @@ var adsloaded = [];
 var showAds = true; //show slide-up leaderboards at bottom
 var slideAds = 1; //number of times to slide up a leaderboard
 var titleFade = true; //whether to fade the Denver Post logo in the top-bar to show the "DP" and a text title
-//var pages = ['#titlepage','#part1','#photos','#part2']; //div/section IDs that should trigger a page view and title change
-var pages = [];
-$('.omnitrig').each(function(i,e) { pages.push('#'+$(e).attr('id')) });
 var galleries = [];
-var playedVideos = [];
-$('.centergallery').each(function(i,e) { galleries.push('#'+$(e).attr('id')) }); //div/section IDs of galleries to instantiate (must be a div like #photos and have a child, the gallery itself, with the same ID plus 'gallery' -- i.e. #photosgallery)
+$('.centergallery').each(function(i,e) {
+galleries.push('#'+$(e).attr('id'));
+}); //div/section IDs of galleries to instantiate (must be a div like #photos and have a child, the gallery itself, with the same ID plus 'gallery' -- i.e. #photosgallery)
 
 function revealSocial(type,link,title,image,desc,twvia,twrel) {
     title = typeof title !== 'undefined' ? title : false;
@@ -119,25 +117,6 @@ function toggleSidebar(toShow,toHide) {
     scrollDownTo(toShow);
 }
 
-function playerCreator(embedId, playerId, divId) {
-    divId = typeof divId !== 'undefined' ? divId : false;
-    if (divId) {
-        $(divId).animate({backgroundColor:'rgba(0,70,70,0.3)',paddingLeft:'.5em',paddingRight:'.5em'}, 350).delay(2000).animate({backgroundColor:'transparent',paddingLeft:'0',paddingRight:'0'},1000);
-    }
-    if (playedVideos.indexOf(playerId) != 0) {
-        playedVideos.push(playerId);
-        $('#' + embedId).html('<video id="'+embedId+'player" preload controls autoplay> \n\
-            <source src="./video/'+playerId+'.mp4" /> \n\
-            <source src="./video/'+playerId+'.webm" /> \n\
-        </video>');
-        $('#' + embedId).css('cursor','default');
-    }
-}
-
-function playerScroller(embedId, playerId, divId) {
-    scrollDownTo(('#' + embedId),100);
-    playerCreator(embedId, playerId, divId);
-}
 function getNodePosition(node) {
     var eTop = $(node).offset().top;
     return Math.abs(eTop - $(window).scrollTop());
@@ -155,7 +134,7 @@ function isVisible(element) {
 
 function isElementInViewport(el) {
     el = el.toString().replace('#','');
-    if (document.getElementById(el) != null) {
+    if (document.getElementById(el) !== null) {
         var rect = document.getElementById(el).getBoundingClientRect();
         var half = window.innerHeight / 2;
         var whole = window.innerHeight;
@@ -165,17 +144,8 @@ function isElementInViewport(el) {
     }
 }
 
-$('.top-top').click(function(evt) {
+$('.top-top').click(function() {
     $('.toggle-topbar').click();
-});
-
-$('.vid-embed').on("mouseenter", function() {
-    $(this).find('.playicon').fadeTo(300, 0);
-    $(this).find('.playtext').fadeTo(300, 1);
-});
-$('.vid-embed').on("mouseleave", function() {
-    $(this).find('.playicon').fadeTo(300, 1);
-    $(this).find('.playtext').fadeTo(300, 0);
 });
 
 function fadeNavBar(reverse) {
@@ -261,7 +231,7 @@ function checkAdPos() {
         var topNow = $(window).scrollTop();
         if (!swapped) {
             var adTimes = getAdTimes(slideAds);
-            for (var i = 0; i < adTimes.length; i++) {
+            for (i=0;i<adTimes.length;i++) {
                 if (!adsloaded[i] && topNow > adTimes[i] && topNow < (typeof adTimes[(i+1)] !== 'undefined' ? adTimes[(i+1)] : docHeight)) {
                     swapAd();
                     adsloaded[i] = true;
@@ -270,29 +240,6 @@ function checkAdPos() {
             }
         }
     }
-}
-
-function checkPageState(pages) {
-    for (key in pages) {
-        if ($(window).scrollTop() < 100) {
-            rewrite_url('','');
-            break;
-        }
-        var currentpage = pages[key];
-        var next = (pages[parseInt(key) + 1]) ? pages[parseInt(key) + 1] : currentpage;
-        var prev = (pages[parseInt(key) - 1]) ? pages[parseInt(key) - 1] : currentpage;
-        if (isElementInViewport(currentpage) && currentpage != current) {
-            var triggerDiv = $(currentpage);
-            rewrite_url(currentpage.toString(),$(triggerDiv).data('omniTitle'));
-            if ($(triggerDiv).hasClass('omnitrig')) {
-                load_omniture();
-                $(triggerDiv).removeClass('omnitrig');
-            }
-        }
-    }
-	if (isElementInViewport('#next-page')) {
-            hideAdManual();   
-        }
 }
 
 $('.chart-late').find('img').unveil(300);
@@ -309,7 +256,6 @@ $(window).scroll(function() {
 setInterval(function() {
     if (didScroll) {
         checkFade();
-        checkPageState(pages);
         revealSlides(galleries);
         checkAdPos();
     }
